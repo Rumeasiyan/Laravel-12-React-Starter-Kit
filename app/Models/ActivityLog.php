@@ -12,7 +12,7 @@ class ActivityLog extends Model
      *
      * @var string
      */
-    protected $connection = 'logs';
+    protected $connection = 'mysql_logs';
 
     /**
      * The attributes that are mass assignable.

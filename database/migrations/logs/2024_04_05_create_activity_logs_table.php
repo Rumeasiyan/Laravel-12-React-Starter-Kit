@@ -11,7 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::connection('logs')->create('activity_logs', function (Blueprint $table) {
+        Schema::connection('mysql_logs')->create('activity_logs', function (Blueprint $table) {
             $table->id();
             $table->string('event');
             $table->string('model_type');
@@ -34,6 +34,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::connection('logs')->dropIfExists('activity_logs');
+        Schema::connection('mysql_logs')->dropIfExists('activity_logs');
     }
 };
