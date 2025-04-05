@@ -112,6 +112,16 @@ return [
             // 'trust_server_certificate' => env('DB_TRUST_SERVER_CERTIFICATE', 'false'),
         ],
 
+        'logs' => [
+            'driver' => env('DB_CONNECTION', 'mysql'),
+            'url' => env('LOG_DATABASE_URL'),
+            'host' => env('LOG_DB_HOST', '127.0.0.1'),
+            'port' => env('LOG_DB_PORT', '3306'),
+            'database' => env('LOG_DB_DATABASE', 'laravel'),
+            'username' => env('LOG_DB_USERNAME', 'root'),
+            'password' => env('LOG_DB_PASSWORD', ''),
+        ],
+
     ],
 
     /*
