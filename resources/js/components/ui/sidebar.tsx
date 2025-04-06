@@ -40,6 +40,7 @@ type SidebarContext = {
   toggleSidebar: () => void
 }
 
+// eslint-disable-next-line no-redeclare
 const SidebarContext = React.createContext<SidebarContext | null>(null)
 
 function useSidebar() {

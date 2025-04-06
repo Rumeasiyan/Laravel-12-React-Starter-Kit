@@ -46,6 +46,6 @@ class CreateActivityLogDTO
             'user_id' => $this->user_id,
             'ip_address' => $this->ip_address,
             'user_agent' => $this->user_agent,
-        ], fn($value) => !is_null($value));
+        ], fn ($value) => ! is_null($value));
     }
 }

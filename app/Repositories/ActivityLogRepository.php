@@ -3,7 +3,6 @@
 namespace App\Repositories;
 
 use App\Models\ActivityLog;
-use Illuminate\Pagination\LengthAwarePaginator;
 use Illuminate\Database\Eloquent\Builder;
 
 class ActivityLogRepository
@@ -72,7 +71,7 @@ class ActivityLogRepository
                 'itemsPerPage' => $paginator->perPage(),
                 'totalPages' => $paginator->lastPage(),
                 'currentPage' => $paginator->currentPage(),
-            ]
+            ],
         ];
     }
 }

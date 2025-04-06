@@ -1,0 +1,2 @@
+# Run PHP tests
+php artisan test

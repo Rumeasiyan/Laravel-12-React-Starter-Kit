@@ -1,0 +1,51 @@
+{
+  "preset": "laravel",
+  "rules": {
+    "align_multiline_comment": true,
+    "array_indentation": true,
+    "array_syntax": true,
+    "blank_line_after_namespace": true,
+    "blank_line_after_opening_tag": true,
+    "combine_consecutive_issets": true,
+    "combine_consecutive_unsets": true,
+    "concat_space": {
+      "spacing": "one"
+    },
+    "declare_parentheses": true,
+    "explicit_string_variable": true,
+    "fully_qualified_strict_types": true,
+    "global_namespace_import": {
+      "import_classes": true,
+      "import_constants": true,
+      "import_functions": true
+    },
+    "lambda_not_used_import": true,
+    "method_chaining_indentation": true,
+    "modernize_types_casting": true,
+    "nullable_type_declaration_for_default_null_value": true,
+    "no_superfluous_phpdoc_tags": false,
+    "ordered_imports": {
+      "sort_algorithm": "alpha"
+    },
+    "phpdoc_add_missing_param_annotation": true,
+    "phpdoc_align": true,
+    "phpdoc_annotation_without_dot": true,
+    "phpdoc_indent": true,
+    "phpdoc_inline_tag_normalizer": true,
+    "phpdoc_no_empty_return": true,
+    "phpdoc_no_package": true,
+    "phpdoc_order": true,
+    "phpdoc_return_self_reference": true,
+    "phpdoc_scalar": true,
+    "phpdoc_separation": true,
+    "phpdoc_single_line_var_spacing": true,
+    "phpdoc_summary": true,
+    "phpdoc_to_comment": false,
+    "phpdoc_to_param_type": false,
+    "phpdoc_to_property_type": false,
+    "phpdoc_to_return_type": false,
+    "phpdoc_trim": true,
+    "phpdoc_types": true,
+    "phpdoc_var_without_name": true
+  }
+}

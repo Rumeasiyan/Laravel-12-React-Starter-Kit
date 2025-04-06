@@ -1,0 +1,31 @@
+branch-name:
+  # Branch name validation
+  validation:
+    pattern: '^(feature|bugfix|hotfix|release|support|docs|ci|test|refactor|perf|style|chore)/[A-Z]+-[0-9]+/[a-z0-9-]+$'
+    message: |
+      🚫 Branch name validation failed. Please follow the branch naming convention:
+
+      Format: <type>/<ticket-id>/<description>
+
+      Types allowed:
+      - feature/   (new features)
+      - bugfix/    (bug fixes)
+      - hotfix/    (urgent fixes for production)
+      - release/   (release branches)
+      - support/   (maintenance tasks)
+      - docs/      (documentation updates)
+      - ci/        (CI/CD changes)
+      - test/      (test additions or updates)
+      - refactor/  (code refactoring)
+      - perf/      (performance improvements)
+      - style/     (code style changes)
+      - chore/     (general maintenance)
+
+      Examples:
+      ✅ feature/CCT-123/add-user-authentication
+      ✅ bugfix/CCT-456/fix-login-validation
+      ✅ hotfix/CCT-789/fix-security-vulnerability
+      ✅ docs/CCT-321/update-api-documentation
+
+      The ticket ID must be in uppercase with a hyphen.
+      The description must be in lowercase with hyphens between words.

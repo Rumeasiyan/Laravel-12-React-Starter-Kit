@@ -1,0 +1,20 @@
+name: PR Title Validation
+
+on:
+  pull_request:
+    types: [opened, edited, synchronize, reopened]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Validate PR Title
+        uses: deepakputhraya/action-pr-title@master
+        with:
+          regex: '^(feature|bugfix|hotfix|release|support|docs|ci|test|refactor|perf|style|chore)/[A-Z]+-[0-9]+/[a-z0-9-]+$'
+          allowed_prefixes: 'feature/,bugfix/,hotfix/,release/,support/,docs/,ci/,test/,refactor/,perf/,style/,chore/'
+          prefix_case_sensitive: false
+          min_length: 5
+          max_length: 100

@@ -15,14 +15,15 @@ class ActivityLogService
     ) {}
 
     /**
-     * Get paginated activity logs with filters
+     * Get paginated activity logs with filters.
      *
-     * @param array $filters
-     * @param int $page
-     * @param int $limit
+     * @param array  $filters
+     * @param int    $page
+     * @param int    $limit
      * @param string $query
      * @param string $sortBy
      * @param string $sortOrder
+     *
      * @return array
      */
     public function getPaginatedLogs(
@@ -44,9 +45,10 @@ class ActivityLogService
     }
 
     /**
-     * Create a new activity log
+     * Create a new activity log.
      *
      * @param CreateActivityLogDTO $dto
+     *
      * @return ActivityLog
      */
     public function createLog(CreateActivityLogDTO $dto): ActivityLog
