@@ -11,7 +11,7 @@ export default function Loading() {
         width: '100%',
       }}
     >
-      <Loader2 className="h-10 w-10 animate-spin text-[--primary-base]" />
+      <Loader2 className="text-primary h-10 w-10 animate-spin" />
     </div>
   );
 }

@@ -44,7 +44,7 @@ export function GlobalDialog({
           {primaryButton && (
             <Button
               className={cn(
-                'bg-[var(--primary-base)] text-white hover:bg-[var(--primary-base)]/80',
+                'bg-primary hover:bg-primary/80 text-white',
                 primaryButton?.className,
               )}
               disabled={primaryButton?.isDisabled || false}
