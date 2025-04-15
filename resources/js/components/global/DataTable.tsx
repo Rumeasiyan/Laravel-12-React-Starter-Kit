@@ -63,7 +63,7 @@ export function DataTable<TData extends object, TValue>({
     <>
       <div
         className={cn(
-          'w-screen overflow-x-auto pt-4 pl-4 md:w-[calc(100vw_-_17rem)]',
+          'w-screen overflow-x-auto pt-4 pl-4 md:w-[calc(100vw_-_16rem)]',
           tableWrapperClassName,
         )}
       >

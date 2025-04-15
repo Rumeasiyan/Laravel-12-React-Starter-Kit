@@ -15,7 +15,7 @@ const TableFooter = <TData extends object>({
   table,
 }: TableFooterProps<TData>) => {
   return (
-    <div className="flex w-screen flex-wrap items-center justify-between gap-4 overflow-x-auto px-4 py-4 md:w-[calc(100vw_-_17rem)]">
+    <div className="flex w-screen flex-wrap items-center justify-between gap-4 overflow-x-auto px-4 py-4 md:w-[calc(100vw_-_16rem)]">
       <div className="text-sm text-gray-700">
         Page {table.getState().pagination.pageIndex + 1} of{' '}
         {table.getPageCount()}
