@@ -4,11 +4,19 @@ on:
   pull_request:
     types: [opened, edited, synchronize, reopened]
 
+permissions:
+  contents: read
+  pull-requests: read
+  actions: read
+
 jobs:
   validate:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+          persist-credentials: false
 
       - name: Validate PR Title
         uses: deepakputhraya/action-pr-title@master
@@ -16,5 +24,7 @@ jobs:
           regex: '^(feature|bugfix|hotfix|release|support|docs|ci|test|refactor|perf|style|chore)/[A-Z]+-[0-9]+/[a-z0-9-]+$'
           allowed_prefixes: 'feature/,bugfix/,hotfix/,release/,support/,docs/,ci/,test/,refactor/,perf/,style/,chore/'
           prefix_case_sensitive: false
-          min_length: 5
+          min_length: 10
           max_length: 100
+          verbal_description: 'PR title must follow format: type/PROJ-123/description (e.g. feature/ABC-123/add-login-page)'
+          github_token: ${{ github.token }}

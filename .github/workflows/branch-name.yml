@@ -1,0 +1,22 @@
+name: Branch Name Validation
+
+on:
+  create:
+  push:
+    branches:
+      - '**'
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Validate Branch Name
+        uses: deepakputhraya/action-branch-name@master
+        with:
+          regex: '^(feature|bugfix|hotfix|release|support|docs|ci|test|refactor|perf|style|chore)/[A-Z]+-[0-9]+/[a-z0-9-]+$'
+          allowed_prefixes: 'feature/,bugfix/,hotfix/,release/,support/,docs/,ci/,test/,refactor/,perf/,style/,chore/'
+          ignore: main,develop
+          min_length: 5
+          max_length: 100
