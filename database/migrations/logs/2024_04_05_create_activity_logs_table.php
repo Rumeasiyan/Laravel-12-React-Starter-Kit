@@ -17,6 +17,7 @@ return new class extends Migration
             $table->string('model_type');
             $table->unsignedBigInteger('model_id');
             $table->string('action');
+            $table->text('description');
             $table->json('old_values')->nullable();
             $table->json('new_values')->nullable();
             $table->unsignedBigInteger('user_id')->nullable();
